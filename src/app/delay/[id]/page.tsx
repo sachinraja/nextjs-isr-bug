@@ -10,6 +10,7 @@ export default async function Home({
 	params: Promise<{ id: string }>;
 }) {
 	const { id } = await params;
+	await new Promise((resolve) => setTimeout(resolve, 5000));
 	return (
 		<div
 			style={{
